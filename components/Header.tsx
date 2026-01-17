@@ -34,18 +34,20 @@ export default function Header() {
     return (
         <div className="sticky top-0 z-50 shadow-sm">
            <header
-             className={`lg:px-40 relative p-4 w-full flex justify-between items-center transition-all duration-300 ${
+             className={`xl:px-40 relative p-4 w-full flex justify-between items-center transition-all duration-300 ${
                     isScrolled 
                         ? "bg-branco/60 backdrop-blur-md" 
                         : "bg-branco shadow-sm"
                 }`}
            >
-            <div>
-                PML
-            </div>
-            <div>
-                <h1>Festival da Mandioca</h1>
-                <p>Prefeitura Municipal de Lagarto</p>
+            <div className="flex items-center gap-2">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg flex items-center justify-center bg-azul font-bold text-branco text-lg md:text-2xl">
+                    PML
+                </div>
+                <div>
+                    <h1 className="text-base md:text-xl font-bold text-azul">Festival da Mandioca</h1>
+                    <p className="text-xs md:text-base text-preto/60">Prefeitura Municipal de Lagarto</p>
+                </div>
             </div>
             <div className="lg:hidden flex justify-between items-center">
                 <button className="cursor-pointer outline-none border-none" onClick={toggleMobileMenu}>
@@ -92,6 +94,6 @@ export default function Header() {
         label: string;
         onClick?: () => void;
     }) {
-        return <Link href={href} onClick={onClick}>{label}</Link>
+        return <Link href={href} onClick={onClick} className="text-preto/60">{label}</Link>
     }
 }
