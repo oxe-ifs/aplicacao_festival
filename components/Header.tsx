@@ -73,12 +73,12 @@ export default function Header() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex justify-content itens-center gap-4">
-                    <NavLink href="#home" label="Início" onClick={toggleMobileMenu} />
-                    <NavLink href="#schedule" label="Programação" onClick={toggleMobileMenu} />
-                    <NavLink href="#news" label="Notícias" onClick={toggleMobileMenu} />
-                    <NavLink href="#about" label="Sobre" onClick={toggleMobileMenu} />
-                    <NavLink href="#tourism" label="Turismo" onClick={toggleMobileMenu} />
-                    <NavLink href="#contact" label="Contato" onClick={toggleMobileMenu} />
+                    <NavLink href="#home" label="Início"/>
+                    <NavLink href="#schedule" label="Programação"/>
+                    <NavLink href="#news" label="Notícias"/>
+                    <NavLink href="#about" label="Sobre"/>
+                    <NavLink href="#tourism" label="Turismo"/>
+                    <NavLink href="#contact" label="Contato"/>
             </div>
            </header>
         </div>
