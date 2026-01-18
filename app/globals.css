@@ -6,6 +6,8 @@
   --branco: #fefdff;
   --preto: #19232a;
   --azul: #0065b4;
+  --azul-escuro: #003b75;
+  --atualizador:0;
 }
 
 @theme inline {
@@ -15,6 +17,7 @@
   --color-branco: var(--branco);
   --color-preto: var(--preto);
   --color-azul: var(--azul);
+  --color-azul-escuro: var(--azul-escuro);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +25,7 @@
     --branco: #fefdff;
     --preto: #19232a;
     --azul: #0065b4;
+    --azul-escuro: #003b75;
   }
 }
 
