@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 
 import { FiCalendar } from "react-icons/fi";
 import { FaRegClock } from "react-icons/fa6";
