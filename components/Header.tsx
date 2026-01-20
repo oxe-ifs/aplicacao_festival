@@ -16,10 +16,26 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Funções de Scroll do header
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setIsScrolled(window.scrollY > 10);
+    }
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="sticky top-0 z-50 shadow-sm">
       <header
-        className={`xl:px-40 relative p-4 w-full flex justify-between items-center transition-all duration-300 `}
+        className={`xl:px-40 relative p-4 w-full flex justify-between items-center transition-all duration-300 ${
+                    isScrolled 
+                        ? "bg-branco/60 backdrop-blur-md" 
+                        : "bg-branco shadow-sm"
+                }`}
       >
         <div className="flex items-center gap-2">
           <Link href="#home">

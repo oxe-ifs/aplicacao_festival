@@ -156,7 +156,7 @@ function ProgramacaoCard({ dia }: { dia: ProgramacaoDia }) {
 
 export default function ProgramacaoSection() {
   return (
-    <section id="programacao" className="xl:px-40">
+    <section id="programacao" className="xl:px-15 px-10">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 p-4">
         {programacao.map((dia) => (
           <ProgramacaoCard key={dia.data} dia={dia} />
