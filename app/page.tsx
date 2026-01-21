@@ -14,7 +14,7 @@ export default function Home() {
         id="chamada"
         className="relative flex items-center justify-center"
       >
-        <div className="h-180 w-full bg-azul text-branco flex flex-col items-center justify-start pt-22">
+        <div className="h-200 w-full bg-azul text-branco flex flex-col items-center justify-start pt-22">
           <div className="text-sm md:text-base p-2 border-2 border-branco/20 bg-branco/30 rounded-full text-center w-80 md:w-130 font-bold">
             <p className="uppercase">
               Prefeitura Municipal de Lagarto - Sergipe
@@ -40,6 +40,21 @@ export default function Home() {
               <GrLocation className="w-5 h-5 md:w-8 md:h-8" />
               <p className="leading-none">Lagarto / SE</p>
             </div>
+          </div>
+
+          <div className="mt-24 md:mt-12 flex gap-6">
+            <a
+              href="#programacao"
+              className="text-center w-40 md:w-45 p-3 border-2 border-branco bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco"
+            >
+              Ver Programação
+            </a>
+            <a
+              href="#noticias"
+              className="text-center w-40 md:w-45 p-3 border-2 border-branco/50 rounded-sm cursor-pointer font-semibold hover:bg-branco hover:text-preto"
+            >
+              Saiba Mais
+            </a>
           </div>
         </div>
 
