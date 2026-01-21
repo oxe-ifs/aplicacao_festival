@@ -87,6 +87,9 @@ export default function Home() {
           </p>
         </div>
         <NoticiasCard />
+        <div className="w-full text-center mt-8 mb-16">
+          <a href="#" className="text-sm font-semibold text-azul max-w-40 py-2 px-4 rounded-md border border-azul hover:bg-azul hover:text-branco">Ver Todas as Notícias</a>
+        </div>
       </section>
     </div>
   );
