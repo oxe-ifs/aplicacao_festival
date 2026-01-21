@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 import ProgramacaoCard from "@/components/ProgramacaoCard";
+import NoticiasCard from "@/components/NoticiasCard";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -76,6 +77,16 @@ export default function Home() {
           </p>
         </div>
         <ProgramacaoCard />
+      </section>
+
+      <section id="noticias" className="xl:px-40 mt-15">
+        <div className="text-center justify-between">
+          <h1 className="text-3xl font-bold text-balance">Notícias e Comunicados</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Fique por dentro das últimas novidades dos Festejos
+          </p>
+        </div>
+        <NoticiasCard />
       </section>
     </div>
   );

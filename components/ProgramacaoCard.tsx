@@ -108,7 +108,7 @@ function ProgramacaoCard({ dia }: { dia: ProgramacaoDia }) {
     <div
       id="card"
       className="py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-    >
+    > 
       <div
         id="card-header"
         className="bg-azul/15 justify-between flex items-center px-4 py-2 mb-4"
