@@ -42,7 +42,7 @@ function SobreCard ({ sobreItem }: { sobreItem: SobreCardItem }) {
     return (
         <div id="card" className="flex gap-4 p-6 border border-preto/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <div className="flex h-12 w-12 p-4 items-center justify-center rounded-lg bg-azul/20">
-                <Icon className="text-azul size={22}" />
+                <Icon className="text-azul" />
             </div>
             <div>
                 <h3 className="text-lg font-semibold text-preto">{sobreItem.titulo}</h3>
@@ -54,7 +54,7 @@ function SobreCard ({ sobreItem }: { sobreItem: SobreCardItem }) {
 
 export default function SobreSection() {
     return (
-      <section className="xl:px-15 md:px-10 px-6">
+      <section className="mx-5 md:mx-10 lg:mx-30">
         <div className="grid md:grid-cols-2 gap-4 mt-8 p-4">
             {sobre.map((sobreItem) => (
                 <SobreCard sobreItem={sobreItem} key={sobreItem.titulo} />

@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import ProgramacaoCard from "@/components/ProgramacaoCard";
 import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
+import TurismoCard from "@/components/TurismoCard";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -72,7 +73,7 @@ export default function Home() {
 
       <section id="programacao" className="xl:px-40 mt-15">
         <div className="text-center justify-between">
-          <h1 className="text-3xl font-bold">Programação Oficial</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Programação Oficial</h1>
           <p className="text-lg text-preto/60 text-balance">
             Confira toda a programação dos festejos juninos 2026
           </p>
@@ -82,7 +83,7 @@ export default function Home() {
 
       <section id="noticias" className="xl:px-40 mt-20">
         <div className="text-center justify-between">
-          <h1 className="text-3xl font-bold text-balance">Notícias e Comunicados</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold text-balance mb-5">Notícias e Comunicados</h1>
           <p className="text-lg text-preto/60 text-balance">
             Fique por dentro das últimas novidades dos Festejos
           </p>
@@ -95,7 +96,7 @@ export default function Home() {
 
       <section id="sobre" className="xl:px-40 mt-20">
         <div className="text-center justify-between xl:px-15 md:px-10 px-6">
-          <h1 className="text-3xl font-bold text-balance">Sobre os Festejos</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Sobre os Festejos</h1>
           <p className="text-lg text-preto/60 text-balance">
             Conheça a história e a importância cultural do nosso festival
           </p>
@@ -108,6 +109,16 @@ export default function Home() {
           </div>
         </div>
         <SobreCard />
+      </section>
+
+      <section id="turismo" className="xl:px-40 mt-20">
+        <div className="text-center justify-between xl:px-15 md:px-10 px-6">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Conheça Lagarto</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Descubra o que nossa cidade tem a oferecer durante sua visita
+          </p>
+        </div>
+        <TurismoCard />
       </section>
     </div>
   );
