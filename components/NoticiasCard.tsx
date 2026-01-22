@@ -42,7 +42,7 @@ function NoticiaCard({ noticia }: { noticia: NoticiaItem }) {
     return (
       <div
       id="card"
-      className="group py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 hover:card-title:text-azul"
+      className="group py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
       >
         <div className="relative">
           <Image
