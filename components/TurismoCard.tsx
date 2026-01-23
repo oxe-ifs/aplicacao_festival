@@ -57,12 +57,19 @@ function TurismoCard ({ turismoItem }: { turismoItem: TurismoCardItem }) {
     const Icon = turismoItem.icon;
 
     return (
-        <div id="card" className="flex gap-4 p-6 border border-preto/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div id="card" className="gap-4 p-6 border border-preto/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <div className="flex">
-                <div className="flex h-12 w-12 p-4 items-center justify-center rounded-lg bg-azul/20">
-                    <Icon className="text-azul" />
+                <div className="flex p-4 items-center justify-center rounded-lg bg-azul/20">
+                    <Icon className="text-azul h-8 w-8" />
                 </div>
-                <h3 className="mx-4 mt-4 text-lg font-semibold">{turismoItem.titulo}</h3>
+                <h3 className="mx-4 mt-4 text-xl font-semibold">{turismoItem.titulo}</h3>
+            </div>
+            <div className="pl-6">
+                <ul className="mt-2">
+                    {turismoItem.itens.map((item) => (
+                        <li key={item} className="mt-2 text-md list-disc marker:text-azul marker:text-3xl">{item}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     )

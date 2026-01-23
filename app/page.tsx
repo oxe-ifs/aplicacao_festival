@@ -5,6 +5,7 @@ import ProgramacaoCard from "@/components/ProgramacaoCard";
 import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
+import Footer from "@/components/Footer";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -120,6 +121,8 @@ export default function Home() {
         </div>
         <TurismoCard />
       </section>
+
+      <Footer/>
     </div>
   );
 }
