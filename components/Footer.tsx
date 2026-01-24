@@ -14,9 +14,15 @@ export default function Footer() {
                     <h3 className="text-lg font-semibold pb-4">Festival da Mandioca</h3>
                     <p className="text-branco/80">Celebrando a tradição e cultura nordestina através dos Festejos Juninos de Lagarto/SE.</p>
                     <div className="flex gap-4 mt-5">
-                    <LuFacebook className="w-6 h-6 cursor-pointer hover:text-branco/80" />
-                    <LuInstagram className="w-6 h-6 cursor-pointer hover:text-branco/80" />
-                    <LuYoutube className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                    <a href="#">
+                        <LuFacebook className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                    </a>
+                    <a href="#">
+                        <LuInstagram className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                    </a>
+                    <a href="#">
+                        <LuYoutube className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                    </a>
                     </div>
                 </div>
                 <div>
