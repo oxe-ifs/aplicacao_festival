@@ -2,6 +2,10 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 import ProgramacaoCard from "@/components/ProgramacaoCard";
+import NoticiasCard from "@/components/NoticiasCard";
+import SobreCard from "@/components/SobreCard";
+import TurismoCard from "@/components/TurismoCard";
+import Footer from "@/components/Footer";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -70,13 +74,55 @@ export default function Home() {
 
       <section id="programacao" className="xl:px-40 mt-15">
         <div className="text-center justify-between">
-          <h1 className="text-3xl font-bold">Programação Oficial</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Programação Oficial</h1>
           <p className="text-lg text-preto/60 text-balance">
             Confira toda a programação dos festejos juninos 2026
           </p>
         </div>
         <ProgramacaoCard />
       </section>
+
+      <section id="noticias" className="xl:px-40 mt-20">
+        <div className="text-center justify-between">
+          <h1 className="text-3xl lg:text-5xl font-bold text-balance mb-5">Notícias e Comunicados</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Fique por dentro das últimas novidades dos Festejos
+          </p>
+        </div>
+        <NoticiasCard />
+        <div className="w-full text-center mt-8 mb-16">
+          <a href="#" className="text-sm font-semibold text-azul max-w-40 py-2 px-4 rounded-md border border-azul hover:bg-azul hover:text-branco">Ver Todas as Notícias</a>
+        </div>
+      </section>
+
+      <section id="sobre" className="xl:px-40 mt-20">
+        <div className="text-center justify-between xl:px-15 md:px-10 px-6">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Sobre os Festejos</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Conheça a história e a importância cultural do nosso festival
+          </p>
+          <div className="mt-10 px-6 py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md mx-5 md:mx-10 lg:mx-30 mb-10">
+            <div className="text-left text-md text-preto/95">
+              <p className="py-2">O <strong>Festival da Mandioca</strong> é o coração dos Festejos Juninos de Lagarto, uma celebração que há décadas reúne a comunidade sergipana em torno de suas raízes culturais e gastronômicas. A mandioca, alimento essencial da cultura nordestina, é homenageada através de suas diversas formas e sabores.</p>
+              <p className="py-2">Durante os festejos, a cidade se transforma em um grande palco de cores, sons e sabores. As tradicionais quadrilhas juninas, o forró pé-de-serra, as comidas típicas e o artesanato local criam uma atmosfera única que atrai milhares de visitantes de todo o Brasil.</p>
+              <p className="py-2">Mais do que uma festa, os Festejos Juninos de Lagarto representam a preservação da identidade cultural sergipana e a valorização das tradições que passam de geração em geração, fortalecendo os laços comunitários e promovendo o turismo regional.</p>
+            </div>
+          </div>
+        </div>
+        <SobreCard />
+      </section>
+
+      <section id="turismo" className="xl:px-40 mt-20">
+        <div className="text-center justify-between xl:px-15 md:px-10 px-6">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Conheça Lagarto</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Descubra o que nossa cidade tem a oferecer durante sua visita
+          </p>
+        </div>
+        <TurismoCard />
+      </section>
+
+      <Footer/>
     </div>
   );
 }

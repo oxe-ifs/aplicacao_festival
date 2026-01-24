@@ -107,11 +107,11 @@ function ProgramacaoCard({ dia }: { dia: ProgramacaoDia }) {
   return (
     <div
       id="card"
-      className="py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-    >
+      className="py-6 border border-preto/20 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+    > 
       <div
         id="card-header"
-        className="bg-azul/15 justify-between flex items-center px-4 py-2 mb-4"
+        className="bg-azul/10  justify-between flex items-center px-4 py-2 mb-4"
       >
         <div>
           <h1 data-slot="card-title" className="text-lg font-semibold">
@@ -156,7 +156,7 @@ function ProgramacaoCard({ dia }: { dia: ProgramacaoDia }) {
 
 export default function ProgramacaoSection() {
   return (
-    <section id="programacao" className="xl:px-15 px-10">
+    <section id="programacao" className="xl:px-15 md:px-10 px-6">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 p-4">
         {programacao.map((dia) => (
           <ProgramacaoCard key={dia.data} dia={dia} />
