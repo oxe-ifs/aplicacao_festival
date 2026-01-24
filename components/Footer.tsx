@@ -14,15 +14,15 @@ export default function Footer() {
                     <h3 className="text-lg font-semibold pb-4">Festival da Mandioca</h3>
                     <p className="text-branco/80">Celebrando a tradição e cultura nordestina através dos Festejos Juninos de Lagarto/SE.</p>
                     <div className="flex gap-4 mt-5">
-                    <a href="#">
-                        <LuFacebook className="w-6 h-6 cursor-pointer hover:text-branco/80" />
-                    </a>
-                    <a href="#">
-                        <LuInstagram className="w-6 h-6 cursor-pointer hover:text-branco/80" />
-                    </a>
-                    <a href="#">
-                        <LuYoutube className="w-6 h-6 cursor-pointer hover:text-branco/80" />
-                    </a>
+                        <a href="#Facebook">
+                            <LuFacebook className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                        </a>
+                        <a href="#Instagram">
+                            <LuInstagram className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                        </a>
+                        <a href="#Youtube">
+                            <LuYoutube className="w-6 h-6 cursor-pointer hover:text-branco/80" />
+                        </a>
                     </div>
                 </div>
                 <div>
@@ -34,16 +34,39 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold pb-4">Contato</h3>
-                    <p className="text-branco/80 mb-2"><BsTelephone className="inline mr-2 text-branco h-5 w-5" /> (79) 3631-1234</p>
-                    <p className="text-branco/80 mb-2"><LuMail className="inline mr-2 text-branco h-5 w-5" /> contato@festejoslagarto.se.gov.br</p>
-                    <p className="text-branco/80 mb-2"><GrLocation className="inline mr-2 text-branco h-5 w-5" /> Praça Central, Lagarto - SE</p>
+                    <p className="text-branco/80 mb-2"><BsTelephone className="inline mr-2 text-branco h-5 w-5" /> (00) 0000-0000</p>
+                    <p className="text-branco/80 mb-2"><LuMail className="inline mr-2 text-branco h-5 w-5" /> email@email.se.gov.br</p>
+                    <p className="text-branco/80 mb-2"><GrLocation className="inline mr-2 text-branco h-5 w-5" /> Local, Lagarto - SE</p>
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold pb-4">Realização</h3>
-                    <p className="text-branco/80 mb-2">Prefeitura de Lagarto</p>
-                    <p className="text-branco/80 mb-2">Secretaria de Cultura</p>
-                    <p className="text-branco/80 mb-2">Governo do Estado de Sergipe</p>
-                    <p className="text-branco/80 mb-2">Parceiros Privados</p>
+                    <a
+                        href="https://lagarto.se.gov.br/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-branco/80 hover:text-branco mb-2 block"
+                    >
+                        Prefeitura de Lagarto
+                    </a>
+
+                    <a
+                        href="https://lagarto.se.gov.br/orgao/secretaria/secretaria-municipal-da-cultura"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-branco/80 hover:text-branco mb-2 block"
+                    >
+                        Secretaria de Cultura
+                    </a>
+
+                    <a
+                        href="https://www.se.gov.br/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-branco/80 hover:text-branco mb-2 block"
+                    >
+                        Governo do Estado de Sergipe
+                    </a>
+
                 </div>
             </div>
             <div className="text-center max-w-7xl mx-auto mt-6 lg:flex lg:justify-between">
@@ -61,19 +84,22 @@ export default function Footer() {
         href,
         label,
         onClick,
+        target,
     }: {
         href: string;
         label: string;
         onClick?: () => void;
+        target?: string;
     }) {
         return (
-        <Link
-            href={href}
-            onClick={onClick}
-            className="text-branco/80 hover:text-branco mb-2 block"
-        >
-            {label}
-        </Link>
+            <Link
+                href={href}
+                onClick={onClick}
+                target={target}
+                className={`text-branco/80 hover:text-branco mb-2 block`}
+            >
+                {label}
+            </Link>
         );
     }
 }
