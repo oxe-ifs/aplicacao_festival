@@ -6,6 +6,7 @@ import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
 import Footer from "@/components/Footer";
+import BackgroundHome from "@/components/BackgroundHome";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -19,98 +20,10 @@ export default function Home() {
           className="relative flex items-center justify-center overflow-hidden"
       >
         {/* --- CAMADA DE COLAGEM (BACKGROUND) --- */}
-        <div className="absolute inset-0 z-0">
-          {/* Grid de Imagens */}
-          <div className="grid grid-cols-4 md:grid-cols-6 grid-rows-4 h-full w-full gap-1">
-            <div className="relative col-span-1 row-span-2">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Cultura" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Festival" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-2 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Mandioca" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-2">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Cultura" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Festival" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-2 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Mandioca" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-2">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Cultura" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Festival" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-2 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Mandioca" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/graviola.jpg" alt="Show" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1">
-              <Image src="/imgs/colagem/ifs 2025.jpg" alt="Tradição" fill className="object-cover" />
-            </div>
-            <div className="relative col-span-1 row-span-1 hidden md:block">
-              <Image src="/imgs/colagem/jenipapo.jpg" alt="Lagarto SE" fill className="object-cover" />
-            </div>
-          </div>
-
-          {/* Overlay Azul para dar contraste ao texto (Ajuste a opacidade no /80 ou /90) */}
-          <div className="absolute inset-0 bg-azul/25 backdrop-blur-[2px]"></div>
-        </div>
+        <BackgroundHome />
 
         {/* --- CONTEÚDO (FRENTE) --- */}
-        <div className="relative z-10 h-200 w-full text-branco flex flex-col items-center justify-start pt-22">
+        <div className="relative z-10 h-170 w-full text-branco text-shadow-xl9 flex flex-col items-center justify-start pt-22">
           <div className="text-sm md:text-base p-2 border-2 border-branco/20 bg-branco/30 rounded-full text-center w-80 md:w-130 font-bold backdrop-blur-md">
             <p className="uppercase">
               Descubra a cultura e história de Lagarto - Sergipe
@@ -128,27 +41,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-24 md:mt-12 flex items-center justify-center text-base gap-6 font-bold">
-            <div className="flex flex-col items-center justify-center gap-4 text-center">
-              <FiCalendar className="w-5 h-5 md:w-8 md:h-8" />
-              <p className="leading-none">Junho 2026</p>
-            </div>
-            <div className="flex flex-col items-center justify-center gap-4 text-center">
-              <GrLocation className="w-5 h-5 md:w-8 md:h-8" />
-              <p className="leading-none">Lagarto / SE</p>
-            </div>
-          </div>
-
           <div className="mt-24 md:mt-12 flex gap-6">
             <a
                 href="#programacao"
-                className="text-center w-45 md:w-45 p-3 border-2 border-branco bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco transition-all"
+                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco transition-all"
             >
               Ver Programação
             </a>
             <a
                 href="#noticias"
-                className="text-center w-45 md:w-45 p-3 border-2 border-branco/50 rounded-sm cursor-pointer font-semibold hover:bg-branco hover:text-preto transition-all"
+                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco/50 rounded-sm cursor-pointer font-semibold hover:bg-branco hover:text-preto transition-all"
             >
               Saiba Mais
             </a>
