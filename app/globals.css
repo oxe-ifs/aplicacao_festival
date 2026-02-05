@@ -4,6 +4,7 @@
   --atualizador: 1; /* Não remover esta linha - usada para forçar atualização de cache */
 
   --branco: #fefdff;
+  --branco-escuro: #efefef;
   --preto: #19232a;
   --azul: #0065b4;
   --azul-escuro: #003b75;
@@ -15,6 +16,7 @@
   --font-mono: var(--font-geist-mono);
 
   --color-branco: var(--branco);
+  --color-branco-escuro: var(--branco-escuro);
   --color-preto: var(--preto);
   --color-azul: var(--azul);
   --color-azul-escuro: var(--azul-escuro);
@@ -23,6 +25,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --branco: #fefdff;
+    --branco-escuro: #efefef;
     --preto: #19232a;
     --azul: #0065b4;
     --azul-escuro: #003b75;

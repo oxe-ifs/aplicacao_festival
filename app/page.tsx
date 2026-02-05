@@ -5,6 +5,7 @@ import ProgramacaoCard from "@/components/ProgramacaoCard";
 import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
+import GaleriaCard from "@/components/GaleriaCard";
 import Footer from "@/components/Footer";
 import BackgroundHome from "@/components/BackgroundHome";
 
@@ -19,11 +20,11 @@ export default function Home() {
           id="chamada"
           className="relative flex items-center justify-center overflow-hidden"
       >
-        {/* --- CAMADA DE COLAGEM (BACKGROUND) --- */}
+        {/* --- (BACKGROUND) --- */}
         <BackgroundHome />
 
         {/* --- CONTEÚDO (FRENTE) --- */}
-        <div className="relative z-10 h-170 w-full text-branco text-shadow-xl9 flex flex-col items-center justify-start pt-22">
+        <div className="relative z-10 h-170 w-full text-branco-escuro text-shadow-xl9 flex flex-col items-center justify-start pt-22">
           <div className="text-sm md:text-base p-2 border-2 border-branco/20 bg-branco/30 rounded-full text-center w-80 md:w-130 font-bold backdrop-blur-md">
             <p className="uppercase">
               Descubra a cultura e história de Lagarto - Sergipe
@@ -44,13 +45,13 @@ export default function Home() {
           <div className="mt-24 md:mt-12 flex gap-6">
             <a
                 href="#programacao"
-                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco transition-all"
+                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco-escuro bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco-escuro transition-all"
             >
               Ver Programação
             </a>
             <a
                 href="#noticias"
-                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco/50 rounded-sm cursor-pointer font-semibold hover:bg-branco hover:text-preto transition-all"
+                className="text-center w-40 h-12 text-sm md:text-md md:w-45 p-3 border-2 border-branco-escuro bg-branco rounded-sm text-preto cursor-pointer font-semibold hover:bg-transparent hover:text-branco-escuro transition-all"
             >
               Saiba Mais
             </a>
@@ -115,6 +116,19 @@ export default function Home() {
           </p>
         </div>
         <TurismoCard />
+      </section>
+
+      <section id="galeria" className="xl:px-40 mt-20">
+        <div className="text-center justify-between">
+          <h1 className="text-3xl lg:text-5xl font-bold text-balance mb-5">Galeria</h1>
+          <p className="text-lg text-preto/60 text-balance mx-10">
+            Fotos que mostram nossa cultura e tradições
+          </p>
+        </div>
+        <GaleriaCard />
+        <div className="w-full text-center mt-8 mb-16">
+          <a href="#" className="text-sm font-semibold text-azul max-w-40 py-2 px-4 rounded-md border border-azul hover:bg-azul hover:text-branco">Ver Galeria Completa</a>
+        </div>
       </section>
 
       <Footer/>

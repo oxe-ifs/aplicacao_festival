@@ -4,11 +4,21 @@ import Image from "next/image";
 import { useState } from "react";
 
 const imagens = [
-  "/imgs/background/cordel.jpg",
-  "/imgs/background/nossa_senhora_da_piedade.jpg",
-  "/imgs/background/palco_festival.jpg",
-  "/imgs/background/praca_da_fonte.jpg",
-  "/imgs/background/santuario_nossa_senhora_da_piedade.jpg",
+  {
+    src: "/imgs/background/cordel-lg.jpg",
+  },
+  {
+    src: "/imgs/background/nossa_senhora_da_piedade-lg.jpg",
+  },
+  {
+    src: "/imgs/background/palco_festival-lg.jpg",
+  },
+  {
+    src: "/imgs/background/santuario_nossa_senhora_da_piedade-lg.jpg",
+  },
+  {
+    src: "/imgs/background/praca_da_fonte-lg.jpg",
+  }
 ];
 
 function getRandomIndex(max: number) {
@@ -21,11 +31,16 @@ export default function BackgroundHome() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
       <Image
-        src={imagens[index]}
+        src={imagens[index].src}
         alt="Background"
         fill
         priority
         className="object-cover"
+        sizes="
+          (max-width: 640px) 100vw,
+          (max-width: 1024px) 100vw,
+          100vw
+        "
       />
     </div>
   );
