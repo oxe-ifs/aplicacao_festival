@@ -66,12 +66,8 @@ export default function AjudaVisitanteSection() {
 
     return (
         <section id="ajuda-visitante" className="xl:px-40 mt-20">
-            {/* Conteúdo */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6">
-                {/* Mapa */}
                 <MapaCard />
-
-                {/* Cards */}
                 <div className="bg-branco rounded-lg shadow-md p-6 flex flex-col justify-between">
                     <div className="space-y-6 text-left">
                         {AjudaVisitante.map((item) => (

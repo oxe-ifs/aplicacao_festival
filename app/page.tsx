@@ -12,6 +12,7 @@ import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
 import AjudaVisitanteSection from "@/components/AjudaVisitanteSection";
 import GaleriaCard from "@/components/GaleriaCard";
+import QuemSomosSection from "@/components/QuemSomosSection";
 import Footer from "@/components/Footer";
 
 import { FiCalendar } from "react-icons/fi";
@@ -166,6 +167,16 @@ export default function Home() {
         <div className="w-full text-center mt-8 mb-16">
           <a href="#" className="text-sm font-semibold text-azul max-w-40 py-2 px-4 rounded-md border border-azul hover:bg-azul hover:text-branco">Ver Galeria Completa</a>
         </div>
+      </section>
+
+      <section id="quem_somos" className="xl:px-40 mt-20">
+        <div className="text-center justify-between">
+          <h1 className="text-3xl lg:text-5xl font-bold text-balance mb-5">Quem Somos</h1>
+          <p className="text-lg text-preto/60 text-balance mx-10">
+            Um projeto feito com carinho por quem acredita em Lagarto
+          </p>
+        </div>
+        <QuemSomosSection />
       </section>
 
       <Footer/>
