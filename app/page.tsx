@@ -138,7 +138,7 @@ export default function Home() {
 
       <section id="turismo" className="xl:px-40 mt-20">
         <div className="text-center justify-between xl:px-15 md:px-10 px-6">
-          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Conheça Lagarto</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Pontos Turísticos</h1>
           <p className="text-lg text-preto/60 text-balance">
             Descubra o que nossa cidade tem a oferecer durante sua visita
           </p>
