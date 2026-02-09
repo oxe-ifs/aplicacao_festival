@@ -5,6 +5,7 @@ import PatrimonioImateCard from "@/components/PatrimonioImateCard";
 import ImportanciaCultCard from "@/components/ImportanciaCultCard"; 
 import ImportanciaEconCard from "@/components/ImportanciaEconCard";
 import ProgramacaoCard from "@/components/ProgramacaoCard";
+import AgendaCard from "@/components/AgendaCard";
 import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
@@ -130,7 +131,7 @@ export default function Home() {
             Veja sobre as festividades e eventos culturais
           </p>
         </div>
-        
+        <AgendaCard />
       </section>
 
       <section id="turismo" className="xl:px-40 mt-20">
