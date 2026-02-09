@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Header from "@/components/Header";
+import BackgroundHome from "@/components/BackgroundHome";
 import PatrimonioImateCard from "@/components/PatrimonioImateCard";
 import ImportanciaCultCard from "@/components/ImportanciaCultCard"; 
 import ImportanciaEconCard from "@/components/ImportanciaEconCard";
@@ -9,9 +10,9 @@ import AgendaCard from "@/components/AgendaCard";
 import NoticiasCard from "@/components/NoticiasCard";
 import SobreCard from "@/components/SobreCard";
 import TurismoCard from "@/components/TurismoCard";
+import AjudaVisitanteSection from "@/components/AjudaVisitanteSection";
 import GaleriaCard from "@/components/GaleriaCard";
 import Footer from "@/components/Footer";
-import BackgroundHome from "@/components/BackgroundHome";
 
 import { FiCalendar } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
@@ -142,6 +143,16 @@ export default function Home() {
           </p>
         </div>
         <TurismoCard />
+      </section>
+
+      <section id="informacoes" className="xl:px-40 mt-20">
+        <div className="text-center justify-between xl:px-15 md:px-10 px-6">
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5">Ajuda ao Visitante</h1>
+          <p className="text-lg text-preto/60 text-balance">
+            Informações essenciais para quem está visitando Lagarto
+          </p>
+        </div>
+        <AjudaVisitanteSection />
       </section>
 
       <section id="galeria" className="xl:px-40 mt-20">
