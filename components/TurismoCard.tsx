@@ -1,88 +1,84 @@
 "use client";
 
-import { IconType } from "react-icons";
-import { LuUtensils, LuShoppingBag, LuCamera } from "react-icons/lu";
-import { GrLocation } from "react-icons/gr";
+import Image from "next/image";
 
-type TurismoCardItem = {
+type PontoTuristicoItem = {
     titulo: string;
-    icon: IconType;
-    itens: string[];
-}
+    descricao: string;
+    imagem: string;
+    categoria: "Histórico" | "Cultural" | "Praça" | "Patrimônio";
+};
 
-const turismo: TurismoCardItem[] = [
+// Simulando recebimento do banco / Precisa do back
+const PontosTuristicos: PontoTuristicoItem[] = [
     {
-        titulo: "Onde Comer",
-        icon: LuUtensils,
-        itens: [ 
-            "Restaurante Sabor Nordestino - Comida típica sergipana", 
-            "Casa da Mandioca - Especialidades em pratos regionais", 
-            "Forró & Sabor - Gastronomia e música ao vivo", 
-            "Barraca do João - Tapioca e cuscuz artesanais" 
-        ]
+        titulo: "Santuário de Nossa Senhora da Piedade",
+        descricao:
+            "Principal símbolo religioso da cidade, localizada no centro histórico e marcada pela fé e tradição do povo lagartense.",
+        imagem: "/imgs/Background/santuario_nossa_senhora_da_piedade-lg.jpg",
+        categoria: "Patrimônio",
     },
     {
-        titulo: "Pontos Turísticos",
-        icon: GrLocation,
-        itens: [
-            "Igreja Matriz de Nossa Senhora da Piedade",
-            "Centro Histórico de Lagarto",
-            "Praça Samuel de Oliveira",
-            "Museu Municipal de Lagarto"
-        ]
+        titulo: "Barragem Dionísio de Araújo Machado",
+        descricao:
+            "A Barragem Dionísio de Araújo Machado é um dos principais atrativos naturais de Lagarto, com grande potencial turístico e de lazer à beira d’água. A orla e as margens da barragem têm projeto de infraestrutura para receber visitantes, proporcionando contato com a natureza e atividades ao ar livre.",
+        imagem: "/imgs/turismo/centro-historico.jpg",
+        categoria: "Histórico",
     },
     {
-        titulo: "Artesanato Local",
-        icon: LuShoppingBag,
-        itens: [
-            "Feira de Artesanato do Centro",
-            "Cerâmica e Barro de Lagarto",
-            "Renda e Bordado Tradicional",
-            "Cestaria em Palha e Fibras"
-        ]
+        titulo: "Praça Dr. Filomeno Hora",
+        descricao:
+            "A Praça Dr. Filomeno Hora é um espaço público tradicional no coração de Lagarto, ponto de encontro, convivência e lazer para moradores e visitantes. É um marco da vida urbana e social da cidade e costuma sediar eventos, feiras e atividades comunitárias ao ar livre.",
+        imagem: "/imgs/turismo/praca-samuel.jpg",
+        categoria: "Praça",
     },
     {
-        titulo: "Experiências",
-        icon: LuCamera,
-        itens: [
-            "Tour pela Rota da Mandioca",
-            "Oficinas de Quadrilha Junina",
-            "Visita às Casas de Farinha",
-            "Trilhas Ecológicas Rurais"
-        ]
-    }
-]
+        titulo: "Parque das Palmeiras",
+        descricao:
+            "O Parque das Palmeiras, também conhecido como antiga Fazenda Bonfim, é um espaço com grande valor cultural e paisagístico, tradicional entre os locais. O nome faz referência ao conjunto de palmeiras que marca o local, combinando paisagem natural e importância histórica.",
+        imagem: "/imgs/turismo/museu.jpg",
+        categoria: "Cultural",
+    },
+];
 
-function TurismoCard ({ turismoItem }: { turismoItem: TurismoCardItem }) {
-    const Icon = turismoItem.icon;
-
+function PontoTuristicoCard({ item }: { item: PontoTuristicoItem }) {
     return (
-        <div id="card" className="gap-4 p-6 border border-preto/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-            <div className="flex">
-                <div className="flex p-4 items-center justify-center rounded-lg bg-azul/20">
-                    <Icon className="text-azul h-8 w-8" />
-                </div>
-                <h3 className="mx-4 mt-4 text-xl font-semibold">{turismoItem.titulo}</h3>
+        <div className="flex flex-col bg-branco border border-preto/10 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="relative w-full h-48">
+                <Image
+                    src={item.imagem}
+                    alt={item.titulo}
+                    fill
+                    className="object-cover"
+                />
             </div>
-            <div className="pl-6">
-                <ul className="mt-2">
-                    {turismoItem.itens.map((item) => (
-                        <li key={item} className="mt-2 text-md list-disc marker:text-azul marker:text-3xl">{item}</li>
-                    ))}
-                </ul>
+
+            <div className="p-5 flex flex-col gap-2">
+                <span className="text-sm font-semibold text-azul">
+                    {item.categoria}
+                </span>
+                <h3 className="text-xl font-bold">
+                    {item.titulo}
+                </h3>
+                <p className="text-preto/75 text-sm">
+                    {item.descricao}
+                </p>
             </div>
         </div>
-    )
+    );
 }
 
-export default function Turismosection() {
+export default function TurismoSection() {
     return (
-        <section className="mx-5 md:mx-10 lg:mx-30">
-            <div className="grid md:grid-cols-2 gap-4 mt-8 p-4">
-                {turismo.map((turismoItem) => (
-                    <TurismoCard turismoItem={turismoItem} key={turismoItem.titulo} />
+        <section id="pontos-turisticos" className="xl:px-40 mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+                {PontosTuristicos.map((item) => (
+                    <PontoTuristicoCard
+                        key={item.titulo}
+                        item={item}
+                    />
                 ))}
             </div>
         </section>
-    )
+    );
 }
